@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*Makes it so that divs are the same size regardless of varying padding and margin*/
+}
+
+.navbar{
+    background-color: black;
+    color: white;
+    border-bottom: 0.5px solid gray; /*Set the style for the bottom border of the element*/
+    width: 100%; /*Will define the element's width*/
+    line-height: 80px;
+    height: 80px; /*Will define the element's height*/
+    font-size: 18px;
+    padding: 0 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Karla';
+}
+
+.navbar a{
+    text-decoration: none; /*Specifies decoration added to text. Is the shorthand property for txt-deco-line + txt-deco-color + txt-deco-style*/
+    color: white;
+}
+
+/*Define how the Home Text is displayed*/
+.navbar a.nav-logo{
+    float: left; /*The float property will define the positionning of the element -> right side, left side, or whereever the element is defined (float: none;)*/
+    height: inherit; 
+    line-height: inherit; 
+    padding: 0 30px;
+    font-size: 40px;
+    text-transform: uppercase; /*Controls the capitalization of text -> "text-transform::uppercase/lowercase/capitalize"*/
+    letter-spacing: 2px;
+    font-family: 'Karla'; /*specifies the font that will be used. Can include 'fallbacks'*/
+    color: white;
+    font-weight: bold; /*defines how thin or thick the characters in text should be displayed*/
+}
+
+/*Define how the unordered list will appear*/
+.navbar ul{
+    float: right;
+    list-style: none;
+    height: inherit;
+    line-height: inherit;
+    padding: 0 50px;
+}
+
+/*Define how each element of the unordered lists will appear*/
+.navbar ul li{
+    display: inline-block; /*Commonly used to display list items horizontally instead of vertically. Inline-Block respects padding and margins, and allows you to set width and height*/
+}
+
+.navbar ul li a{
+    display: block;
+    text-align: center;
+    min-width: 0 30px;
+    padding: 0 30px;
+}
+
+.navbar ul li a:hover{
+    background-color: gray;
+}
+
+body{
+    background-color: black;
+}
+
+.content{
+    font-family: 'Karla';
+    color:white;
+    margin-top: 30%;
+    margin-left: 100px;
+}
+
+h1{
+    font-size: 70px;
+}
+
+p{
+    margin-top: 10px;
+}
+
+main{
+    display: grid; /*generates a block-level grid*/
+    grid-template-columns: 1fr 1fr; /*Defines the number (and widths) of columns in a grid layout. Here, we create two columns. grid-template-rows property defines the height of each row*/
+}
+
+.btns{
+    margin-top: 20px;
+    background: darkolivegreen;
+    cursor: pointer; /*change the appearance of the cursor on hover*/
+    color: white;
+    padding: 12px 20px;
+    float: left;
+    border: 0;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.btns:hover{
+    background: gray;
+}
+
+/*Define default image parameters*/
+img{
+    margin-top: 80px;
+    margin-left: 175px;
+    width: 700px;
+    filter: grayscale(1);
+}
+
+/*Create a transition to color on hover mouse*/
+img:hover{
+    filter: grayscale(0);
+    transition: 3s;
+    cursor: pointer;/*change the appearance of the cursor on hover*/
+}
